@@ -21,5 +21,23 @@ public class HomeController {
 		logger.debug("=======HomeController.tohHome() invoked=======");
 		return "home";
 	}
+	
+	/**
+	 * 跳转到converter.jsp页面上
+	 */
+	@RequestMapping("/toConverter")
+	public String toConverter(){
+		return "converter";
+	}
+	
+	/**
+	 * 测试自动类型转换（String--->Integer）
+	 * @param age
+	 */
+	@RequestMapping("/converter")
+	public String converter(Integer age){
+		System.out.println(age);
+		return "converter";
+	}
 }
 
