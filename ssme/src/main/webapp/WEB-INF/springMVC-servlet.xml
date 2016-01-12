@@ -88,6 +88,11 @@
 		</property>
 	</bean>
  
+ 	<!-- 配置拦截器 -->
+	<mvc:interceptors>
+	    <!-- 配置全局拦截器 -->
+	    <bean class="com.univ.interceptor.DebugInterceptor"></bean>
+	</mvc:interceptors>
 </beans>
 <!-- 说明：
 1.使用了<context:component-scan />则可以不使用<context:annotation-config />
